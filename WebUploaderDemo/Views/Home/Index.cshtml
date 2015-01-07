@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+@section styles{
+    <link href="~/Scripts/webuploader/webuploader.css" rel="stylesheet" />
+}
+@section head{
+    <script src="~/Scripts/webuploader/webuploader.js"></script>
+    <script src="~/Scripts/powerWebUpload.js"></script>
+}
+<form action="/" method="post">
+    <div id="uploader">
+
+    </div>
+    <p>123</p>
+    <div id="uploader2">
+
+    </div>
+    <input type="hidden" name="uploadhidden" id="uploadhidden" />
+    <input type="hidden" name="uploadhidden2" id="uploadhidden2" value="@ViewBag.uploadhidden2" />
+
+    <input type="submit" name="提交" value="submit" />
+</form>
+@section scripts{
+    <script>
+        $(function () {
+            $("#uploader").powerWebUpload({
+                hiddenInputId: "uploadhidden"
+            });
+            $("#uploader2").powerWebUpload({
+                hiddenInputId: "uploadhidden2",
+                PostbackHold: true,
+                ShowDownload: true
+            });
+        })
+    </script>
+}

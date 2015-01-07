@@ -1,0 +1,76 @@
+.webuploader {
+    line-height: initial;
+}
+
+.webuploader-container {
+    position: relative;
+}
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+
+.webuploader-pick {
+    width: 64px;
+    height: 22px;
+    line-height: 23px;
+    position: relative;
+    background: url('../../Content/image/button/upload_button.png') 0px 0px no-repeat;
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.webuploader-pick-hover {
+    background:url('../../Content/image/button/upload_button.png') 0px -23px no-repeat;
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.uploader-list {
+    max-height: 400px;
+    overflow: auto;
+}
+
+    .uploader-list .item > .info {
+        display: inline;
+    }
+
+    .uploader-list .item > .state {
+        display: inline;
+        margin-left: 15px;
+    }
+
+    .uploader-list .item > .del {
+        display: inline-block;
+        margin-left: 15px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../Content/image/icon/Delete.gif");
+        cursor: pointer;
+    }
+    .uploader-list .item > .download {
+        display: inline-block;
+        margin-left: 15px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../../Content/image/icon/download16.gif");
+        cursor: pointer;
+    }
+
+    #thelist span.progress {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+.progress .percentage .bar {
+    color: #ccc;
+}

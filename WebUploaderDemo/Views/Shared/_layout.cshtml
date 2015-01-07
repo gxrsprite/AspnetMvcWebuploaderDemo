@@ -1,0 +1,41 @@
+﻿@{
+    var ua = this.Request.UserAgent;
+    var isIE = ua.Contains("MSIE") || ua.Contains("Trident");
+    ViewBag.isIE = isIE;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+    <script>
+        var applicationPath = "@(Href("~")=="/"?"":Href("~"))";
+    </script>
+    <!--[if lt IE 8]>
+        @Scripts.Render("~/Scripts/lib/json2.js")
+    <![endif]-->
+    <!--[if lt IE 9]>
+        @Scripts.Render("~/Scripts/lib/html5.js")
+    <![endif]-->
+    @if (isIE)
+    {
+        <script src="~/Scripts/JQuery/jquery-1.11.1.js"></script>
+    }
+    else
+    {
+        <script src="~/Scripts/JQuery/jquery-2.1.1.js"></script>
+    }
+    
+    @RenderSection("head", required: false)
+</head>
+<body>
+@RenderBody()
+    @RenderSection("scripts", required: false)
+    @RenderSection("template", required: false)
+</body>
+</html>
