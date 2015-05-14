@@ -18,6 +18,7 @@ namespace WebUploaderDemo
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteTable.Routes.RouteExistingFiles = false;
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }

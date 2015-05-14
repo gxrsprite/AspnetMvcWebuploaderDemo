@@ -13,6 +13,10 @@ namespace WebUploaderDemo.Controllers
             ViewBag.uploadhidden2 = uploadhidden2;
             return View();
         }
-
+        public ActionResult Require(string uploadhidden2)
+        {
+            ViewBag.uploadhidden2 = uploadhidden2;
+            return View();
+        }
     }
 }

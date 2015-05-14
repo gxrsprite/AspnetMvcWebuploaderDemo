@@ -21,7 +21,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -150,17 +150,28 @@
     <Content Include="Scripts\JQuery\jquery-2.1.1.min.js" />
     <Content Include="Scripts\lib\html5.js" />
     <Content Include="Scripts\lib\json2.js" />
+    <Content Include="Scripts\lib\require\config.js" />
+    <Content Include="Scripts\lib\require\css.js" />
+    <Content Include="Scripts\lib\require\domReady.js" />
+    <Content Include="Scripts\lib\require\i18n.js" />
+    <Content Include="Scripts\lib\require\require.js" />
+    <Content Include="Scripts\lib\require\text.js" />
     <Content Include="Scripts\powerWebUpload.js" />
     <Content Include="Scripts\webuploader\Uploader.swf" />
     <Content Include="Scripts\webuploader\webuploader.css" />
     <Content Include="Scripts\webuploader\webuploader.custom.js" />
     <Content Include="Scripts\webuploader\webuploader.custom.min.js" />
+    <Content Include="Scripts\webuploader\webuploader.fis.js" />
     <Content Include="Scripts\webuploader\webuploader.flashonly.js" />
     <Content Include="Scripts\webuploader\webuploader.flashonly.min.js" />
     <Content Include="Scripts\webuploader\webuploader.html5only.js" />
     <Content Include="Scripts\webuploader\webuploader.html5only.min.js" />
     <Content Include="Scripts\webuploader\webuploader.js" />
     <Content Include="Scripts\webuploader\webuploader.min.js" />
+    <Content Include="Scripts\webuploader\webuploader.noimage.js" />
+    <Content Include="Scripts\webuploader\webuploader.noimage.min.js" />
+    <Content Include="Scripts\webuploader\webuploader.nolog.js" />
+    <Content Include="Scripts\webuploader\webuploader.nolog.min.js" />
     <Content Include="Scripts\webuploader\webuploader.withoutimage.js" />
     <Content Include="Scripts\webuploader\webuploader.withoutimage.min.js" />
     <Content Include="Web.config">
@@ -187,12 +198,19 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\JQuery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\lib\require\require.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\webuploader\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Require.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

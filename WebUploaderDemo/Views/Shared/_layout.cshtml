@@ -22,6 +22,11 @@
     <!--[if lt IE 9]>
         @Scripts.Render("~/Scripts/lib/html5.js")
     <![endif]-->
+    @if (ViewBag.requirejs != null && ViewBag.requirejs == true)
+    {
+        @Scripts.Render("~/Scripts/lib/require/require.js")
+        @Scripts.Render("~/Scripts/lib/require/config.js")
+    }
     @if (isIE)
     {
         <script src="~/Scripts/JQuery/jquery-1.11.1.js"></script>
