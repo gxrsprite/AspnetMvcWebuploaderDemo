@@ -21,7 +21,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -144,6 +144,10 @@
     <Content Include="Content\image\icon\Delete.gif" />
     <Content Include="Content\image\icon\download16.gif" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\angular-controls\angular.webuploader.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\i18n\angular-locale_zh-cn.js" />
     <Content Include="Scripts\JQuery\jquery-1.11.1.js" />
     <Content Include="Scripts\JQuery\jquery-1.11.1.min.js" />
     <Content Include="Scripts\JQuery\jquery-2.1.1.js" />
@@ -211,6 +215,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Require.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\version.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\angular.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
